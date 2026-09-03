@@ -61,12 +61,3 @@ During the feature engineering phase, the dataset undergoes the following transf
    - `Geography`: One-Hot Encoded with France as dropped base category $\rightarrow$ `Geography_Germany`, `Geography_Spain`.
 4. **Statistical Pruning (Point-Biserial $p > 0.05$)**:
    - `HasCrCard` ($p=0.4754$), `Tenure` ($p=0.1615$), and `EstimatedSalary` ($p=0.2264$) are removed due to statistical insignificance.
-
----
-
-## 🔒 Data Lineage & Reproduction
-
-To regenerate `churn_cleaned.csv` from raw data, execute:
-```bash
-python -c "import pandas as pd; from src.pipeline import ChurnFeaturePipeline; df = pd.read_csv('data/Churn_Modelling.csv'); p = ChurnFeaturePipeline().fit(df); p.transform(df).to_csv('data/churn_cleaned.csv', index=False)"
-```
