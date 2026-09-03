@@ -1,3 +1,21 @@
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Jupyter & Python cache
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
+*.pyo
+
+# Testing cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local OS & editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
