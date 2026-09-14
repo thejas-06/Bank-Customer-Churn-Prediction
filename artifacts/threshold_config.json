@@ -1,0 +1,11 @@
+{
+  "model_name": "Tuned XGBoost Classifier",
+  "optimal_threshold": 0.655,
+  "metrics": {
+    "roc_auc": 0.8704,
+    "accuracy": 0.867,
+    "precision": 0.702,
+    "recall": 0.602,
+    "f1_score": 0.6481
+  }
+}
