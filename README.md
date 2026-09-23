@@ -9,6 +9,8 @@
 
 An end-to-end, production-grade Machine Learning system designed to identify retail banking customers at risk of attrition, quantify financial exposure, explain individual prediction drivers via **TreeSHAP**, and deliver actionable retention strategies through a **FastAPI microservice** and an **interactive Streamlit stakeholder dashboard**.
 
+**Dataset Source:** [Kaggle - Churn Modelling](https://www.kaggle.com/datasets/shubh0799/churn-modelling)
+
 ---
 
 ## 🏗️ System Architecture
@@ -182,12 +184,3 @@ docker build -t churn-prediction-system .
 # Run container (Exposes FastAPI on port 8000)
 docker run -p 8000:8000 churn-prediction-system
 ```
-
----
-
-## 📜 Resume Ready Highlights
-
-* **End-to-End ML Architecture**: Built a production-grade churn classification system on 10,000 customer records, engineering 5 custom domain features and pruning noise via Point-Biserial significance testing ($p < 0.05$).
-* **Optimized Decision Thresholding**: Tuned an XGBoost classifier to **0.870 ROC-AUC** and calibrated the decision boundary to **0.655**, boosting churn precision to **70.2%** and overall accuracy to **87.0%**.
-* **Explainable AI (XAI)**: Implemented **TreeSHAP** to surface top churn drivers per customer and generate automated retention recommendations.
-* **Production Serving & MLOps**: Packaged inference into a containerized **FastAPI** microservice with Pydantic validation, built a **Streamlit** cockpit, and enforced code reliability with **Pytest**.
